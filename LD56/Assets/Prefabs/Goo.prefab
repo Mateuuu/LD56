@@ -148,7 +148,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7917499718814887713}
   serializedVersion: 4
-  m_Mass: 0.9
+  m_Mass: 1
   m_Drag: 5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -204,5 +204,6 @@ MonoBehaviour:
   player: {fileID: 0}
   enemyDistanceRun: 7
   deathParticle: {fileID: 4575163274543186786, guid: 788a406e9afce5545a155750de20b7d2, type: 3}
+  baseSpeed: 10
   captureMoveSpeed: 10
   captureTime: 2

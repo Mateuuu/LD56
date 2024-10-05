@@ -10,7 +10,9 @@ public class Goo : MonoBehaviour
 
     [SerializeField] float enemyDistanceRun = 5f;
 
-    [SerializeField] ParticleSystem deathParticle; 
+    [SerializeField] ParticleSystem deathParticle;
+
+    [SerializeField] float baseSpeed = 10f;
 
     Collider collider;
 
@@ -22,6 +24,8 @@ public class Goo : MonoBehaviour
     [SerializeField] private float captureMoveSpeed = 5f;
 
     [SerializeField] private float captureTime = 4f;
+
+    private float speedMultiplier = 1f;
     public float CaptureTime
     {
         get
@@ -45,7 +49,7 @@ public class Goo : MonoBehaviour
     void Update()
     {
 
-
+        agent.speed = baseSpeed * speedMultiplier;
 
         if (captured)
         {
@@ -77,6 +81,11 @@ public class Goo : MonoBehaviour
             }
         }
 
+    }
+
+    public void SetSpeedMultiplier(float speedMultiplier)
+    {
+        this.speedMultiplier = speedMultiplier;
     }
 
     public void Capture(Transform target)

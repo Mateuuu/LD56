@@ -121,6 +121,8 @@ public class Vacuum : MonoBehaviour
                         selectedGoos.Add(goo, 0.0f);
                     }
 
+                    goo.SetSpeedMultiplier(.5f);
+
                     goo.Select();
                 }
 
@@ -141,6 +143,8 @@ public class Vacuum : MonoBehaviour
                     selectedGoos.Remove(goo);
 
                     goo.Deselect();
+                    goo.SetSpeedMultiplier(1f);
+
                 }
             }
 
@@ -157,6 +161,7 @@ public class Vacuum : MonoBehaviour
                 {
                     selectedGoos.Remove(goo);
                     goo.Deselect();
+                    goo.SetSpeedMultiplier(1f);
                 }
             }
         }
