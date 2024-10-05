@@ -73,7 +73,7 @@ public class Goo : MonoBehaviour
             }
             else
             {
-                Wander(5f, 1f);
+                Wander(1f, .25f);
             }
         }
 
