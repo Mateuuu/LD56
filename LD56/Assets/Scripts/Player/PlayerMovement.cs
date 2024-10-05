@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float acceleration = 50f;
     [SerializeField] LayerMask floor;
+    [SerializeField] float _aimSpeed = 540;
+
+    [SerializeField] Transform crosshair;
 
     Rigidbody rb;
     Vector2 movement;
@@ -24,15 +27,16 @@ public class PlayerMovement : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        Vector3 hitPos = Vector3.zero;
 
-        if(Physics.Raycast(ray, out hit, 100)){
+        if (Physics.Raycast(ray, out hit, 100, floor)){
 
-            hitPos = ray.origin;
-
+            crosshair.position = hit.point;
         }
 
-        transform.LookAt(hitPos);
+        Vector3 lookVector = crosshair.position - transform.position;
+        lookVector.y = 0;
+        Quaternion lookRotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(lookVector, Vector3.up), _aimSpeed * Time.fixedDeltaTime);
+        rb.MoveRotation(lookRotation);
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
