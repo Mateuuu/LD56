@@ -57,7 +57,8 @@ public class Goo : MonoBehaviour
             {
                 Instantiate(deathParticle, transform.position, Quaternion.identity);
                 Destroy(gameObject);
-                // Slime captured!
+
+                GameManager.Instance.SlimeCaptured();
 
             }
         }

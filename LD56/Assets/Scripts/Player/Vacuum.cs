@@ -27,9 +27,6 @@ public class Vacuum : MonoBehaviour
 
     private VacuumParticles particles;
     private bool sucking = false;
-    private bool poweringDown = false;
-
-    int objectsInVaccumSuction = 0;
 
     private void Awake()
     {
