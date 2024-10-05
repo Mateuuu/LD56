@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Transform crosshair;
 
+    private float currSpeedMultiplier = 1f;
+
     Rigidbody rb;
     Vector2 movement;
 
@@ -56,14 +58,19 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        float xMovement = movement.x * moveSpeed * moveMultiplier;
-        float yMovement = movement.y * moveSpeed * moveMultiplier;
+        float xMovement = movement.x * moveSpeed * moveMultiplier * currSpeedMultiplier;
+        float yMovement = movement.y * moveSpeed * moveMultiplier * currSpeedMultiplier;
 
         Vector3 targetVelocity = new Vector3(xMovement, 0, yMovement);
 
         rb.velocity = new Vector3(xMovement, 0, yMovement);
 
         rb.velocity = Vector3.MoveTowards(rb.velocity, targetVelocity, acceleration * Time.fixedDeltaTime);
+    }
+
+    public void SetSpeedMultiplier(float speedMultiplier)
+    {
+        currSpeedMultiplier = speedMultiplier;
     }
 
 }

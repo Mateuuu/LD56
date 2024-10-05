@@ -9,12 +9,13 @@ public class Goo : MonoBehaviour
 
     [SerializeField] float enemyDistanceRun = 5f;
 
-    [SerializeField] private float multiplier = 5f;
-
     private NavMeshAgent agent;
+
+    Material material;
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        material = GetComponent<MeshRenderer>().material;
     }
 
     void Update()
@@ -32,10 +33,17 @@ public class Goo : MonoBehaviour
         {
             Wander(5f, 1f);
         }
-            
+    }
 
 
-        //agent.destination = player.position;
+    public void Select()
+    {
+        material.SetFloat("_Size", .2f);
+    }
+
+    public void Deselect()
+    {
+        material.SetFloat("_Size", .0f);
     }
 
 
@@ -101,7 +109,7 @@ public class Goo : MonoBehaviour
     // Function to find a random point on the NavMesh within the specified radius
     Vector3 GetRandomPointOnNavMesh(float radius)
     {
-        Vector3 randomDirection = Random.insideUnitSphere * radius; // Generate a random direction
+        Vector3 randomDirection = Random.onUnitSphere * radius; // Generate a random direction
         randomDirection += transform.position; // Offset by the enemy's current position
 
         NavMeshHit navHit;

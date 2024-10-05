@@ -16,22 +16,29 @@ public class VacuumParticles : MonoBehaviour
 
     private bool active = false;
 
+    [HideInInspector]
     public float DistFromOrigin
     {
         get
         {
             return distFromOrigin;
         }
-        private set {}
+        set {
+            distFromOrigin = value;
+        }
     }
+    [HideInInspector]
     public float Amplitude
     {
         get
         {
             return amplitude;
         }
-        private set { }
+        set {
+            amplitude = value;
+        }
     }
+    [HideInInspector]
     public float NumCircles
     {
         get
