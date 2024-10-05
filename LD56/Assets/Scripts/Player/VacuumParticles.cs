@@ -12,7 +12,7 @@ public class VacuumParticles : MonoBehaviour
     [SerializeField] private float distFromOrigin = 4f;
     [SerializeField] private float speed = 20f;
 
-    List<ParticleSystem> particles = new();
+    List<TrailRenderer> particles = new();
 
     private bool active = false;
 
@@ -53,7 +53,7 @@ public class VacuumParticles : MonoBehaviour
     {
         for(int i = 0; i < numParticles; i++)
         {
-            particles.Add(GameObject.Instantiate(particlePrefab, transform.position, Quaternion.identity, transform).GetComponent<ParticleSystem>());
+            particles.Add(GameObject.Instantiate(particlePrefab, transform.position, Quaternion.identity, transform).GetComponent<TrailRenderer>());
         }
     }
 
@@ -65,7 +65,7 @@ public class VacuumParticles : MonoBehaviour
         float origT = t;
 
         float offset = (numCircles * Mathf.PI) / numParticles;
-        foreach(ParticleSystem particle in particles)
+        foreach(TrailRenderer particle in particles)
         {
             t = t % (numCircles * Mathf.PI);
 
@@ -92,9 +92,10 @@ public class VacuumParticles : MonoBehaviour
         {
             // Do the fade in animation of the particles that are 
 
-            foreach(ParticleSystem particle in particles)
+            foreach(TrailRenderer particle in particles)
             {
-                particle.Play();    
+                particle.enabled = true;
+                //particle.Play();    
             }
         }
 
@@ -106,9 +107,10 @@ public class VacuumParticles : MonoBehaviour
 
         if (active)
         {
-            foreach (ParticleSystem particle in particles)
+            foreach (TrailRenderer particle in particles)
             {
-                particle.Stop();
+                particle.enabled = false;
+                //particle.Stop();
             }
         }
 
