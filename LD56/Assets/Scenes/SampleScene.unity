@@ -1885,11 +1885,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3951190abd6b6447ab49bdabc1fa515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 1540794721}
   gunPosition: {fileID: 529012681}
+  suckOrigin: {fileID: 384815021}
   suckCollider: {fileID: 648726909}
   suckable:
     serializedVersion: 2
     m_Bits: 384
+  maxPowerTime: 4
   maxAmplitude: 0.05
   minAmplitude: 0.005
   maxDistFromOrigin: 6

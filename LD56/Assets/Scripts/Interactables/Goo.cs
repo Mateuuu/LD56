@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.GraphicsBuffer;
 
 public class Goo : MonoBehaviour
 {
@@ -9,11 +10,34 @@ public class Goo : MonoBehaviour
 
     [SerializeField] float enemyDistanceRun = 5f;
 
+    [SerializeField] ParticleSystem deathParticle; 
+
+    Collider collider;
+
     private NavMeshAgent agent;
+
+    private bool captured = false;
+
+    private Transform captureTarget;
+    [SerializeField] private float captureMoveSpeed = 5f;
+
+    [SerializeField] private float captureTime = 4f;
+    public float CaptureTime
+    {
+        get
+        {
+            return captureTime;
+        }
+        set
+        {
+            captureTime = value;
+        }
+    }
 
     Material material;
     void Awake()
     {
+        collider = GetComponent<Collider>();
         agent = GetComponent<NavMeshAgent>();
         material = GetComponent<MeshRenderer>().material;
     }
@@ -21,20 +45,46 @@ public class Goo : MonoBehaviour
     void Update()
     {
 
-        Vector3 runTo = transform.position + ((transform.position - player.position));
-        float distance = Vector3.Distance(transform.position, player.position);
 
-        //AvoidWalls();
-        if (distance < enemyDistanceRun)
+
+        if (captured)
         {
-            FleeToFarthestPoint();
+            transform.position = Vector3.MoveTowards(transform.position, captureTarget.position, Time.deltaTime * captureMoveSpeed);
+
+            float dist = Vector3.Distance(captureTarget.position, transform.position);
+
+            if(dist < .05f)
+            {
+                Instantiate(deathParticle, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+                // Slime captured!
+
+            }
         }
         else
         {
-            Wander(5f, 1f);
+            Vector3 runTo = transform.position + ((transform.position - player.position));
+            float distance = Vector3.Distance(transform.position, player.position);
+
+            if (distance < enemyDistanceRun)
+            {
+                FleeToFarthestPoint();
+            }
+            else
+            {
+                Wander(5f, 1f);
+            }
         }
+
     }
 
+    public void Capture(Transform target)
+    {
+        captured = true;
+        captureTarget = target;
+        collider.enabled = false;
+        agent.enabled = false;
+    }
 
     public void Select()
     {
