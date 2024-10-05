@@ -12,6 +12,7 @@ public class Vacuum : MonoBehaviour
     [SerializeField] Transform suckCollider;
     [SerializeField] LayerMask suckable;
 
+    [SerializeField] float suckStrength = 25f;
 
     [SerializeField] float maxPowerTime = 3f;
     [SerializeField] float maxAmplitude = .04f;
@@ -125,7 +126,7 @@ public class Vacuum : MonoBehaviour
 
 
                 Rigidbody otherRb = other.GetComponentInChildren<Rigidbody>();
-                Vector3 force = -transform.right * Time.fixedDeltaTime * 25f * forceMultiplier;
+                Vector3 force = -transform.right * Time.fixedDeltaTime * suckStrength * forceMultiplier;
                 //Debug.Log(force);
                 otherRb.AddForce(force, ForceMode.Impulse);
             }
