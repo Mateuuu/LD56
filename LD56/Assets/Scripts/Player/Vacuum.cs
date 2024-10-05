@@ -128,7 +128,11 @@ public class Vacuum : MonoBehaviour
                 Rigidbody otherRb = other.GetComponentInChildren<Rigidbody>();
                 Vector3 force = -transform.right * Time.fixedDeltaTime * suckStrength * forceMultiplier;
                 //Debug.Log(force);
-                otherRb.AddForce(force, ForceMode.Impulse);
+
+                if(otherRb != null)
+                {
+                    otherRb.AddForce(force, ForceMode.Impulse);
+                }
             }
             else
             {
