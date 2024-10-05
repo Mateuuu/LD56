@@ -7,17 +7,20 @@ public class Vacuum : MonoBehaviour
     [SerializeField] PlayerMovement playerMovement;
 
     [SerializeField] Transform gunPosition;
+    [SerializeField] Transform suckOrigin;
 
     [SerializeField] Transform suckCollider;
     [SerializeField] LayerMask suckable;
 
 
+    [SerializeField] float maxPowerTime = 3f;
     [SerializeField] float maxAmplitude = .04f;
     [SerializeField] float minAmplitude = .005f;
     [SerializeField] float maxDistFromOrigin = 5f;
     [SerializeField] float minDistFromOrigin = .5f;
     [SerializeField] float maxSuckTime = 5f;
     [SerializeField] float chargeRate = 8f;
+    private float totalSuckTime = 0;
     private float currentSuckTime = 0;
 
     private Dictionary<Goo, float> selectedGoos = new();
@@ -25,13 +28,13 @@ public class Vacuum : MonoBehaviour
     private VacuumParticles particles;
     private bool sucking = false;
 
-
-    int objectsInVaccumSuction = 0;
-
     private void Awake()
     {
         particles = GetComponentInChildren<VacuumParticles>();
         particles.Deactivate();
+
+        particles.Amplitude = maxAmplitude;
+        particles.DistFromOrigin = maxDistFromOrigin;
     }
 
     void Update()
@@ -42,10 +45,11 @@ public class Vacuum : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            playerMovement.SetSpeedMultiplier(.6f);
+            totalSuckTime += Time.deltaTime;
+            totalSuckTime = Mathf.Clamp(totalSuckTime, 0, maxPowerTime);
 
-            currentSuckTime -= Time.deltaTime;
-            currentSuckTime = Mathf.Clamp(currentSuckTime, 0, maxSuckTime);
+
+            playerMovement.SetSpeedMultiplier(.6f);
 
             // The particles keep track of whether or not they're active so no need to do that here
             // Although I guess we could
@@ -54,6 +58,9 @@ public class Vacuum : MonoBehaviour
         }
         else
         {
+            totalSuckTime -= Time.deltaTime;
+            totalSuckTime = Mathf.Clamp(totalSuckTime, 0, Mathf.Infinity);
+
 
             playerMovement.SetSpeedMultiplier(1f);
 
@@ -65,8 +72,17 @@ public class Vacuum : MonoBehaviour
         }
 
 
+        if (totalSuckTime >= maxPowerTime)
+        {
+
+            currentSuckTime -= Time.deltaTime;
+            currentSuckTime = Mathf.Clamp(currentSuckTime, 0, maxSuckTime);
+
+        }
+
         particles.Amplitude = Mathf.Lerp(minAmplitude, maxAmplitude, currentSuckTime / maxSuckTime);
         particles.DistFromOrigin = Mathf.Lerp(minDistFromOrigin, maxDistFromOrigin, currentSuckTime / maxSuckTime);
+
 
         //Debug.Log(selectedGoos.Count);
 
@@ -94,6 +110,10 @@ public class Vacuum : MonoBehaviour
                     {
                         selectedGoos[goo] += Time.deltaTime;
                         forceMultiplier = selectedGoos[goo];
+                        if(forceMultiplier >= goo.CaptureTime)
+                        {
+                            goo.Capture(suckOrigin);
+                        }
                     }
                     else
                     {

@@ -203,4 +203,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemyDistanceRun: 7
-  multiplier: 5
+  deathParticle: {fileID: 4575163274543186786, guid: 788a406e9afce5545a155750de20b7d2, type: 3}
+  captureMoveSpeed: 5
+  captureTime: 2
