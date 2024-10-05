@@ -38,12 +38,13 @@ public class Goo : MonoBehaviour
         }
     }
 
+    [SerializeField] SkinnedMeshRenderer meshRenderer;
     Material material;
     void Awake()
     {
         collider = GetComponent<Collider>();
         agent = GetComponent<NavMeshAgent>();
-        material = GetComponent<MeshRenderer>().material;
+        material = meshRenderer.material;
     }
 
     void Update()

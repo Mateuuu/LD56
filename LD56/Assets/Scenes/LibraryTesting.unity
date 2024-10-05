@@ -1709,6 +1709,8 @@ MonoBehaviour:
   minDistFromOrigin: 0.5
   maxSuckTime: 5
   chargeRate: 8
+  slimeTrail: {fileID: 6167642324511637351, guid: 0654655f8c1e28b4ea58573ba4ec7a3a, type: 3}
+  slimeTraileWaitTime: 0.1
 --- !u!54 &748461435
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4154,6 +4156,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1540794719}
+    - target: {fileID: 4712493181154219109, guid: d28d48909844aa143b8b55ce3c0f5a2b, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 6774013535744435691, guid: d28d48909844aa143b8b55ce3c0f5a2b, type: 3}
       propertyPath: m_Name
       value: Goo

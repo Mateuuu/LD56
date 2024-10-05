@@ -24,6 +24,13 @@ public class Vacuum : MonoBehaviour
     private float totalSuckTime = 0;
     private float currentSuckTime = 0;
 
+
+
+    [SerializeField] GameObject slimeTrail;
+    [SerializeField] float slimeTraileWaitTime;
+    HashSet<GameObject> activeSlimeParticles = new();
+    float timeSinceLastSlimeTrail = 0;
+
     private Dictionary<Goo, float> selectedGoos = new();
 
     private VacuumParticles particles;
@@ -119,6 +126,34 @@ public class Vacuum : MonoBehaviour
                     else
                     {
                         selectedGoos.Add(goo, 0.0f);
+                    }
+
+
+                    timeSinceLastSlimeTrail += Time.deltaTime;
+
+                    if(timeSinceLastSlimeTrail > slimeTraileWaitTime)
+                    {
+                        timeSinceLastSlimeTrail = 0f;
+                        activeSlimeParticles.Add(Instantiate(slimeTrail, goo.transform.position + Random.insideUnitSphere, Quaternion.identity));
+                    }
+
+                    List<GameObject> itemsToRemove = new List<GameObject>();
+
+                    foreach(GameObject slimeParticle in activeSlimeParticles)
+                    {
+                        slimeParticle.transform.position = Vector3.MoveTowards(slimeParticle.transform.position, suckOrigin.position, Time.deltaTime * 20f);
+
+                        float dist = Vector3.Distance(transform.position, slimeParticle.transform.position);
+                        if(dist <= .1)
+                        {
+                            itemsToRemove.Add(slimeParticle);
+                        }
+                    }
+
+                    foreach(GameObject slimeParticle in itemsToRemove)
+                    {
+                        activeSlimeParticles.Remove(slimeParticle);
+                        Destroy(slimeParticle);
                     }
 
                     goo.SetSpeedMultiplier(.5f);
