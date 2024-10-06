@@ -52,7 +52,7 @@ Shader "Custom/CustomOutline" {
         // Second pass: Render the actual object
         ZTest LEqual // Respect depth, allowing proper occlusion
         ZWrite On  // Write to the depth buffer
-        Cull Back  // Cull back faces for the normal rendering
+        Cull Off  // Cull back faces for the normal rendering
 
         CGPROGRAM
         #pragma surface surf Standard fullforwardshadows
