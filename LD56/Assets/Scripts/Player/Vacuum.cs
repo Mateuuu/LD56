@@ -41,7 +41,7 @@ public class Vacuum : MonoBehaviour
     private VacuumParticles particles;
     private bool sucking = false;
 
-    private void Awake()
+    private void OnEnable()
     {
         totalSuckTime = maxSuckTime;
         particles = GetComponentInChildren<VacuumParticles>();

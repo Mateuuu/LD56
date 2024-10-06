@@ -8,23 +8,20 @@ public class ExitLevel : MonoBehaviour
 
     [SerializeField] string sceneToLoad;
 
+    [SerializeField] Vector3 playerDoorPoint;
+    [SerializeField] Transform playerTransform;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerBody"))
         {
 
-            string currScene = SceneManager.GetActiveScene().name;
+            if (playerDoorPoint != null && playerTransform != null)
+            {
+                playerTransform.position = playerDoorPoint;
+            }
 
-            if (currScene == "Hallway")
-            {
-                SceneManager.LoadScene(sceneToLoad);
-            }
-            else
-            {
-                HouseSceneManager.Instance.SetSceneComingFrom(currScene);
-                SceneManager.LoadScene("Hallway");
-            }
+            HouseSceneManager.Instance.SetSceneComingFrom(sceneToLoad);
         }
     }
-
 }
