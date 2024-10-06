@@ -39,6 +39,10 @@ public class Goo : MonoBehaviour
     }
 
     [SerializeField] SkinnedMeshRenderer meshRenderer;
+
+
+    [SerializeField] List<string> gooCaptureSounds;
+
     Material material;
     void Awake()
     {
@@ -62,6 +66,9 @@ public class Goo : MonoBehaviour
             {
                 Instantiate(deathParticle, transform.position, Quaternion.identity);
                 Destroy(gameObject);
+
+                AudioManager.instance.PlaySound(gooCaptureSounds[Random.Range(0, gooCaptureSounds.Count)]);
+                AudioManager.instance.PlaySound("GooSucked");
 
                 GameManager.Instance.SlimeCaptured();
 

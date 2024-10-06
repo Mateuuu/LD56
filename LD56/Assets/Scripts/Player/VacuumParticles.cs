@@ -55,6 +55,12 @@ public class VacuumParticles : MonoBehaviour
         {
             particles.Add(GameObject.Instantiate(particlePrefab, transform.position, Quaternion.identity, transform).GetComponent<TrailRenderer>());
         }
+        foreach (TrailRenderer particle in particles)
+        {
+            particle.enabled = false;
+        }
+
+        active = false;
     }
 
     // We're just gonna have a constant function running in update that updates the locations of the particles.

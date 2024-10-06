@@ -50,7 +50,6 @@ public class Vacuum : MonoBehaviour
         particles.DistFromOrigin = maxDistFromOrigin;
 
         particles.Deactivate();
-
     }
 
     void Update()
@@ -85,6 +84,19 @@ public class Vacuum : MonoBehaviour
 
             sucking = false;
             particles.Deactivate();
+            AudioManager.instance.StopSound("VacuumHigh");
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            AudioManager.instance.PlaySound("VacuumOn");
+            AudioManager.instance.PlaySound("VacuumHigh");
+        }
+        else if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            AudioManager.instance.PlaySound("VacuumOff");
+            AudioManager.instance.StopSound("VacuumHigh");
         }
 
 
