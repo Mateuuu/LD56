@@ -438,6 +438,13 @@ MonoBehaviour:
   captureMoveSpeed: 10
   captureTime: 2
   meshRenderer: {fileID: 1167226890924479262}
+  gooCaptureSounds:
+  - Scream1
+  - Scream2
+  - Scream3
+  - Scream4
+  - Scream5
+  - Scream6
 --- !u!114 &2703233237775558528
 MonoBehaviour:
   m_ObjectHideFlags: 0

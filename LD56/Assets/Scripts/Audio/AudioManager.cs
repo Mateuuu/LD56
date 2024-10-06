@@ -91,5 +91,17 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Stop();
     }
+
+    public AudioClip GetSongClip(string songName)
+    {
+        Song s = Array.Find(songs, song => song.songName == songName);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + songName + " not found.");
+            return null;
+        }
+        return s.songClip;
+    }
+
     #endregion
 }
