@@ -6,7 +6,7 @@ public class HouseSongPlayer : MonoBehaviour
 {
     IEnumerator Start()
     {
-         AudioManager.instance.StartSong("HouseOpening");
+        AudioManager.instance.StartSong("HouseOpening");
         AudioSource source = AudioManager.instance.GetSongSource("HouseOpening");
 
 
