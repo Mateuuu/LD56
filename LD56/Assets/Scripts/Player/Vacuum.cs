@@ -1,3 +1,4 @@
+using JigglePhysics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,11 +27,15 @@ public class Vacuum : MonoBehaviour
 
 
 
+
     [SerializeField] GameObject slimeTrail;
     [SerializeField] float slimeTraileWaitTime;
     HashSet<GameObject> activeSlimeParticles = new();
     float timeSinceLastSlimeTrail = 0;
 
+
+
+    [SerializeField] float suckStrengthVisual = 300f;
     private Dictionary<Goo, float> selectedGoos = new();
 
     private VacuumParticles particles;
@@ -110,6 +115,7 @@ public class Vacuum : MonoBehaviour
 
             if (sucking)
             {
+                Vector3 windDir;
                 float forceMultiplier = 1f;
 
                 if(other.TryGetComponent<Goo>(out Goo goo))
@@ -122,6 +128,11 @@ public class Vacuum : MonoBehaviour
                         {
                             goo.Capture(suckOrigin);
                         }
+
+                        windDir = -(goo.transform.position - suckOrigin.position).normalized;
+
+                        goo.GetComponent<JiggleRigBuilder>().wind = windDir * suckStrengthVisual;
+
                     }
                     else
                     {
@@ -141,7 +152,7 @@ public class Vacuum : MonoBehaviour
 
                     foreach(GameObject slimeParticle in activeSlimeParticles)
                     {
-                        slimeParticle.transform.position = Vector3.MoveTowards(slimeParticle.transform.position, suckOrigin.position, Time.deltaTime * 20f);
+                        slimeParticle.transform.position = Vector3.MoveTowards(slimeParticle.transform.position, suckOrigin.position, Time.deltaTime * 10f);
 
                         float dist = Vector3.Distance(transform.position, slimeParticle.transform.position);
                         if(dist <= .1)
@@ -159,6 +170,10 @@ public class Vacuum : MonoBehaviour
                     goo.SetSpeedMultiplier(.5f);
 
                     goo.Select();
+
+                    windDir = -(goo.transform.position - suckOrigin.position).normalized;
+
+                    goo.GetComponent<JiggleRigBuilder>().wind = windDir * suckStrengthVisual;
                 }
 
 
@@ -180,6 +195,10 @@ public class Vacuum : MonoBehaviour
                     goo.Deselect();
                     goo.SetSpeedMultiplier(1f);
 
+                    Vector3 windDir = -(goo.transform.position - suckOrigin.position).normalized;
+
+                    goo.GetComponent<JiggleRigBuilder>().wind = Vector3.zero;
+
                 }
             }
 
@@ -197,6 +216,11 @@ public class Vacuum : MonoBehaviour
                     selectedGoos.Remove(goo);
                     goo.Deselect();
                     goo.SetSpeedMultiplier(1f);
+
+
+                    Vector3 windDir = -(goo.transform.position - suckOrigin.position).normalized;
+
+                    goo.GetComponent<JiggleRigBuilder>().wind = Vector3.zero;
                 }
             }
         }
