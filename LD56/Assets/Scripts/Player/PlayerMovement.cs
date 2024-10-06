@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Transform crosshair;
 
+    Animator animator;
+
     private float currSpeedMultiplier = 1f;
 
     Rigidbody rb;
@@ -20,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        animator = GetComponentInChildren<Animator>();
         cam = Camera.main;
         rb = GetComponent<Rigidbody>();    
     }
@@ -42,6 +45,13 @@ public class PlayerMovement : MonoBehaviour
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("MoveSpeed", movement.normalized.magnitude);
+
+        float amountForward = Vector3.Dot(transform.forward, new Vector3(movement.x, 0, movement.y));
+
+        animator.SetFloat("DotProduct", amountForward);
+
 
         // movement.x = Mathf.Pow(movement.x, 5);          // Make sure this is an odd power so that the sign stays consistent
         // movement.y = Mathf.Pow(movement.y, 5);
