@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Hallway.unity
+    guid: f5cbc1d0b34ea014d86c9e130b76eed2
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: abfbf165a4388ec4d9abc43124d6edd8
   - enabled: 0
@@ -14,9 +17,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/house.unity
     guid: c10f6bbd14611e04db88f20b7d9b3cc8
-  - enabled: 1
-    path: Assets/Scenes/Hallway.unity
-    guid: f5cbc1d0b34ea014d86c9e130b76eed2
   - enabled: 0
     path: Assets/Scenes/Bedroom.unity
     guid: 69dda1c7814976b4b9894a154f4ffe85
