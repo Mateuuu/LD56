@@ -14,7 +14,7 @@ public class VacuumParticles : MonoBehaviour
 
     List<TrailRenderer> particles = new();
 
-    private bool active = false;
+    private bool active = true;
 
     [HideInInspector]
     public float DistFromOrigin

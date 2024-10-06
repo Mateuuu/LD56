@@ -6,16 +6,24 @@ using UnityEngine.SceneManagement;
 public class ExitLevel : MonoBehaviour
 {
 
-    [SerializeField]
-    [SceneAttribute] string sceneToLoad;
+    [SerializeField] string sceneToLoad;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerBody"))
         {
 
-            SceneManager.LoadScene(sceneToLoad);
+            string currScene = SceneManager.GetActiveScene().name;
 
+            if (currScene == "Hallway")
+            {
+                SceneManager.LoadScene(sceneToLoad);
+            }
+            else
+            {
+                HouseSceneManager.Instance.SetSceneComingFrom(currScene);
+                SceneManager.LoadScene("Hallway");
+            }
         }
     }
 
