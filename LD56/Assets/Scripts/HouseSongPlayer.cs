@@ -6,15 +6,19 @@ public class HouseSongPlayer : MonoBehaviour
 {
     IEnumerator Start()
     {
+         AudioManager.instance.StartSong("HouseOpening");
+        AudioSource source = AudioManager.instance.GetSongSource("HouseOpening");
 
-        AudioManager.instance.StartSong("HouseOpening");
-        AudioClip clip = AudioManager.instance.GetSongClip("HouseOpening");
 
-        WaitForSeconds wait = new WaitForSeconds(clip.length);
-
-        yield return wait;
-
-        AudioManager.instance.StartSong("HouseLoop");
+        while (true)
+        {
+            if (!source.isPlaying)
+            {
+                AudioManager.instance.StartSong("HouseLoop");
+                break;
+            }
+            yield return null;
+        }
     }
 
 }
