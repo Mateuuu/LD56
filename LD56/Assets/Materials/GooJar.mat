@@ -68,7 +68,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Emission: 0
-    - _FillLevel: 0.413
+    - _FillLevel: 0
     - _FresnelPower: 2.09
     - _GlassMetallic: 0
     - _GlassSmoothness: 0.909
