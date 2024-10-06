@@ -43,11 +43,15 @@ public class Vacuum : MonoBehaviour
 
     private void Awake()
     {
+        totalSuckTime = maxSuckTime;
         particles = GetComponentInChildren<VacuumParticles>();
         particles.Deactivate();
 
         particles.Amplitude = maxAmplitude;
         particles.DistFromOrigin = maxDistFromOrigin;
+
+        particles.Deactivate();
+
     }
 
     void Update()
