@@ -4810,7 +4810,7 @@ ParticleSystemRenderer:
   m_NormalDirection: 1
   m_ShadowBias: 0
   m_RenderAlignment: 2
-  m_Pivot: {x: 0, y: 5.14, z: 0}
+  m_Pivot: {x: 0, y: 4.11, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
@@ -4841,6 +4841,7 @@ GameObject:
   - component: {fileID: 2693341746851633438}
   - component: {fileID: 2706710506059497287}
   - component: {fileID: 8025056544052282420}
+  - component: {fileID: 5203871926862903720}
   m_Layer: 0
   m_Name: window tile
   m_TagString: Untagged
@@ -4856,7 +4857,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3097927739478322541}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5000003, y: -0.49999976, z: -0.49999964, w: 0.50000024}
+  m_LocalRotation: {x: -0.49991274, y: -0.49991274, z: -0.50008726, w: 0.50008726}
   m_LocalPosition: {x: 6.25, y: -6.5, z: 3.25}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_ConstrainProportionsScale: 0
@@ -4917,6 +4918,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5203871926862903720
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3097927739478322541}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.006253923, y: 0.09999999, z: 0.19999996}
+  m_Center: {x: 0.05137017, y: 0.0000000090223775, z: 0.099999964}
 --- !u!1 &6554810119895541403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4945,8 +4967,8 @@ Transform:
   m_GameObject: {fileID: 6554810119895541403}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.1424, y: -0.007, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0.1424, y: -0.02293, z: -0}
+  m_LocalScale: {x: 0.5, y: 0.102302924, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2693341746851633438}
