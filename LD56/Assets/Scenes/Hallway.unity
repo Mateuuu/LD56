@@ -1058,6 +1058,22 @@ PrefabInstance:
       propertyPath: scenePrefabs.Array.data[4]
       value: 
       objectReference: {fileID: 1232219197}
+    - target: {fileID: 3032949147081665708, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
+      propertyPath: footstepRate
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032949147081665708, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
+      propertyPath: maxFootstepPitch
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032949147081665708, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
+      propertyPath: minFootstepPitch
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032949147081665708, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
+      propertyPath: targetFootStepRate
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3406974122793214117, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1161,6 +1177,18 @@ PrefabInstance:
     - target: {fileID: 6827684065250081472, guid: 8e20218e42150be4583f872be976d582, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
+      propertyPath: songs.Array.data[0].songVolume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
+      propertyPath: songs.Array.data[1].songVolume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
+      propertyPath: songs.Array.data[2].songVolume
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

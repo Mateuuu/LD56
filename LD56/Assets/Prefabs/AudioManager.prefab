@@ -149,6 +149,12 @@ MonoBehaviour:
     soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
+  - soundName: Footstep
+    soundClip: {fileID: 8300000, guid: 1a4bc01033475ec48b883bfe741e3fce, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
   songs:
   - songName: HouseOpening
     songClip: {fileID: 8300000, guid: 87d0b7dc560620949b0400cfe3e4b5f0, type: 3}
