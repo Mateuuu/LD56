@@ -16,7 +16,8 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        sfxVolume = 1f;
+        sfxVolume = .5f;
+        musicVolume = .5f;
         if (instance == null)
         {
             instance = this;
@@ -35,7 +36,6 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.soundVolume;
             s.source.pitch = s.soundPitch;
             s.source.loop = s.isLooping;
-            s.source.outputAudioMixerGroup = _mixer;
         }
         foreach (Song s in songs)
         {
@@ -44,7 +44,6 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.songVolume;
             s.source.pitch = s.songPitch;
             s.source.loop = s.isLooping;
-            s.source.outputAudioMixerGroup = _mixer;
         }
     }
 
@@ -80,6 +79,16 @@ public class AudioManager : MonoBehaviour
         }
         return s.source;
     }
+
+    public void SFXVolume(float percentVolume)
+    {
+        foreach (Sound s in sounds)
+        {
+            s.source.volume = s.soundVolume * percentVolume;
+        }
+        sfxVolume = percentVolume;
+    }
+
     #endregion
     #region Songs
     public void StartSong(string songName)
@@ -113,6 +122,15 @@ public class AudioManager : MonoBehaviour
         }
         return s.songClip;
     }
+
+    public void StopAllSongs()
+    {
+        foreach(Song s in songs)
+        {
+            s.source.Stop();
+        }
+    }
+
     public AudioSource GetSongSource(string songName)
     {
         Song s = Array.Find(songs, song => song.songName == songName);
@@ -122,6 +140,14 @@ public class AudioManager : MonoBehaviour
             return null;
         }
         return s.source;
+    }
+    public void MusicVolume(float percentVolume)
+    {
+        foreach (Song s in songs)
+        {
+            s.source.volume = s.songVolume * percentVolume;
+        }
+        musicVolume = percentVolume;
     }
 
     #endregion

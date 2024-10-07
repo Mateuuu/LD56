@@ -500,9 +500,9 @@ MonoBehaviour:
     m_Bits: 64
   _aimSpeed: 3000
   crosshair: {fileID: 6512857333354224790}
-  footstepRate: 20
-  minFootstepPitch: 2
-  maxFootstepPitch: 3
+  targetFootStepRate: 25
+  minFootstepPitch: 1.5
+  maxFootstepPitch: 2.5
 --- !u!208 &3012428987080500699
 NavMeshObstacle:
   m_ObjectHideFlags: 0
