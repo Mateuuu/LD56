@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         float newFootstepRate = targetFootStepRate;
         if (Mathf.Abs(amountForward) > .5f)
         {
-            newFootstepRate = (int)(targetFootStepRate / 1.8);
+            newFootstepRate = (int)(targetFootStepRate / 2);
         }
 
         if (movement.sqrMagnitude > 0 && i % newFootstepRate == 0)

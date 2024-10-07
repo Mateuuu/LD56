@@ -8,6 +8,7 @@ public class IntroSceneLoader : MonoBehaviour
 {
     private void Start()
     {
+        AudioManager.instance.StopSong("MainMenu");
         StartCoroutine(CheckVideoPlaying());     
     }
 

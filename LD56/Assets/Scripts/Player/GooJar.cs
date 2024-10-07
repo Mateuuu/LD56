@@ -8,29 +8,20 @@ public class GooJar : MonoBehaviour
     MeshRenderer renderer;
     Material material;
 
+
+    private int slimesCaptured = 0;
+
     private void Start()
     {
 
         renderer = GetComponent<MeshRenderer>();
         material = renderer.materials[1];
 
-        GameManager.Instance.slimeCaptured += UpdateJarLevel;
-
-        UpdateJarLevel(GameManager.Instance.SlimesCaptured);
     }
 
-    private void OnDisable()
+    private void Update()
     {
-        GameManager.Instance.slimeCaptured -= UpdateJarLevel;
-
-    }
-
-
-    void UpdateJarLevel(int slimesCaptured)
-    {
-
-        material.SetFloat("_FillLevel", (float) slimesCaptured / GameManager.Instance.NumSlimes);
-
+        material.SetFloat("_FillLevel", (float)GameManager.Instance.SlimesCaptured / GameManager.Instance.NumSlimes);
     }
 
 }
