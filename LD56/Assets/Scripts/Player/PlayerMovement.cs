@@ -23,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         animator = GetComponentInChildren<Animator>();
+
+        animator.speed = 2f;
+
         cam = Camera.main;
         rb = GetComponent<Rigidbody>();    
     }
