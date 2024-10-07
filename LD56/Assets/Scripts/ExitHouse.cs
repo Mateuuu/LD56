@@ -16,6 +16,16 @@ public class ExitHouse : MonoBehaviour
         if (other.CompareTag("PlayerBody"))
         {
 
+
+            if(SceneManager.GetActiveScene().name == "Hehe")
+            {
+                animator.SetBool("Fade", true);
+
+                ableToQuit = true;
+                return;
+            }
+
+
             if(GameManager.Instance.SlimesCaptured < GameManager.Instance.NumSlimes)
             {
                 animator.SetBool("Fade", true);

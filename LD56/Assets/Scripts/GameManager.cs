@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-
     private int slimesCaptured = 0;
     public int SlimesCaptured
     {
@@ -30,6 +29,7 @@ public class GameManager : MonoBehaviour
         private set { }
     }
 
+    public bool GameWon => (slimesCaptured >= numSlimes);
 
 
     public event Action<int> slimeCaptured;
@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {

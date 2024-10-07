@@ -37,4 +37,18 @@ public class MainMenuButtons : MonoBehaviour
 
         Application.Quit();
     }
+
+    public void Hehe()
+    {
+        AudioManager.instance.PlaySound("ButtonClick");
+
+        sceneTransition.TransitionToScene("Hehe");
+    }
+
+    public void Menu()
+    {
+        AudioManager.instance.PlaySound("ButtonClick");
+
+        sceneTransition.TransitionToScene("MainMenu");
+    }
 }

@@ -168,16 +168,16 @@ MonoBehaviour:
     isLooping: 1
     source: {fileID: 0}
   - soundName: VanDrive
-    soundClip: {fileID: 8300000, guid: 27421e57b44122d47be44ea2ea5fd85f, type: 3}
+    soundClip: {fileID: 8300000, guid: 8982ffc6fc3a87f48bd019d1c8efb303, type: 3}
     soundVolume: 1
     soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
   - soundName: ButtonClick
-    soundClip: {fileID: 8300000, guid: 8982ffc6fc3a87f48bd019d1c8efb303, type: 3}
+    soundClip: {fileID: 8300000, guid: 27421e57b44122d47be44ea2ea5fd85f, type: 3}
     soundVolume: 1
     soundPitch: 1
-    isLooping: 1
+    isLooping: 0
     source: {fileID: 0}
   songs:
   - songName: HouseOpening

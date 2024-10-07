@@ -10,6 +10,14 @@ public class SFXSlider : MonoBehaviour
     {
         slider = GetComponent<Slider>();
         slider.value = AudioManager.instance.sfxVolume;
+
+        slider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
     }
 
+
+    // Invoked when the value of the slider changes.
+    public void ValueChangeCheck()
+    {
+        AudioManager.instance.SFXVolume(slider.value);
+    }
 }

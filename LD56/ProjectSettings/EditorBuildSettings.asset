@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: ff72ce4011f230d4eb1d714a50c0c9aa
+  - enabled: 1
+    path: Assets/Scenes/Hehe.unity
+    guid: 49a4452cb2a6af54d811a12910766bdf
   m_configObjects: {}
