@@ -38,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
         footstepAudio = AudioManager.instance.GetSoundSource("Footstep");
     }
 
+    float amountForward = 0f;
+
     void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -59,9 +61,11 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("MoveSpeed", movement.normalized.magnitude);
 
-        float amountForward = Vector3.Dot(transform.forward, new Vector3(movement.x, 0, movement.y));
+        amountForward = Vector3.Dot(transform.forward, new Vector3(movement.x, 0, movement.y));
 
         animator.SetFloat("DotProduct", amountForward);
+            
+
 
 
         // movement.x = Mathf.Pow(movement.x, 5);          // Make sure this is an odd power so that the sign stays consistent
@@ -70,21 +74,24 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    [SerializeField] int footstepRate = 8;
-    [SerializeField] float minFootstepPitch = .95f;
-    [SerializeField] float maxFootstepPitch = 1.05f;
+    [SerializeField] int targetFootStepRate = 8;
+    [SerializeField] float minFootstepPitch = .8f;
+    [SerializeField] float maxFootstepPitch = 1.2f;
     int i = 0;
     private void FixedUpdate()
     {
 
+        float newFootstepRate = targetFootStepRate;
+        if (Mathf.Abs(amountForward) > .5f)
+        {
+            newFootstepRate = (int)(targetFootStepRate / 1.8);
+        }
 
-        
-        if (movement.sqrMagnitude > 0 && i % footstepRate == 0)
+        if (movement.sqrMagnitude > 0 && i % newFootstepRate == 0)
         {
             footstepAudio.pitch = Random.Range(minFootstepPitch, maxFootstepPitch);
             AudioManager.instance.PlaySound("Footstep");
         }
-
         i++;
 
         float moveMultiplier = 1f;
