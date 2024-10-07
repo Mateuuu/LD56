@@ -198,4 +198,10 @@ MonoBehaviour:
     songPitch: 1
     isLooping: 1
     source: {fileID: 0}
+  - songName: Win
+    songClip: {fileID: 8300000, guid: 104f66d6298c9f242b17e50ee9d0cafd, type: 3}
+    songVolume: 0.5
+    songPitch: 1
+    isLooping: 1
+    source: {fileID: 0}
   _mixer: {fileID: 0}

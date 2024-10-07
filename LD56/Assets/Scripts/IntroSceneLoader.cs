@@ -13,6 +13,7 @@ public class IntroSceneLoader : MonoBehaviour
 
         video.SetDirectAudioVolume(0, AudioManager.instance.sfxVolume);
 
+        AudioManager.instance.StopSound("VanIdle");
         AudioManager.instance.StopSong("MainMenu");
         StartCoroutine(CheckVideoPlaying());     
     }

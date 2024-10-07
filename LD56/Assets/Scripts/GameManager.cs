@@ -55,4 +55,9 @@ public class GameManager : MonoBehaviour
         slimeCaptured?.Invoke(slimesCaptured);
     }
     
+    public void ResetSlimeCount()
+    {
+        slimesCaptured = 0;
+    }
+
 }
