@@ -156,25 +156,25 @@ MonoBehaviour:
     isLooping: 0
     source: {fileID: 0}
   - soundName: VanEnter
-    soundClip: {fileID: 8300000, guid: ac58b00adb5032b45bcb67d4424ca9f9, type: 3}
+    soundClip: {fileID: 8300000, guid: 304fa66e9c69e5f4a92b47354f86f694, type: 3}
     soundVolume: 1
     soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
   - soundName: VanIdle
-    soundClip: {fileID: 8300000, guid: bcd16175768799b4391c0219a1e7dd0f, type: 3}
+    soundClip: {fileID: 8300000, guid: 43767e5e7cc4d4a4582fd884ab2f73bd, type: 3}
     soundVolume: 1
     soundPitch: 1
     isLooping: 1
     source: {fileID: 0}
   - soundName: VanDrive
-    soundClip: {fileID: 8300000, guid: 8982ffc6fc3a87f48bd019d1c8efb303, type: 3}
+    soundClip: {fileID: 8300000, guid: fa6d550942a795a40922385cdb76ccec, type: 3}
     soundVolume: 1
     soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
   - soundName: ButtonClick
-    soundClip: {fileID: 8300000, guid: 27421e57b44122d47be44ea2ea5fd85f, type: 3}
+    soundClip: {fileID: 8300000, guid: 096518bbdc753c6469ea7ac1f74ac9ea, type: 3}
     soundVolume: 1
     soundPitch: 1
     isLooping: 0
@@ -199,9 +199,9 @@ MonoBehaviour:
     isLooping: 1
     source: {fileID: 0}
   - songName: Win
-    songClip: {fileID: 8300000, guid: 104f66d6298c9f242b17e50ee9d0cafd, type: 3}
+    songClip: {fileID: 8300000, guid: f776f354bdf7cba4ca3a1ecab94400ce, type: 3}
     songVolume: 0.5
     songPitch: 1
-    isLooping: 1
+    isLooping: 0
     source: {fileID: 0}
   _mixer: {fileID: 0}

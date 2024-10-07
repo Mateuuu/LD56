@@ -12,7 +12,10 @@ public class SlimeCountDisplay : MonoBehaviour
 
     private void Awake()
     {
-        winText.SetActive(false);
+        if(winText != null)
+        {
+            winText.SetActive(false);
+        }
         displayCount = GetComponent<TMP_Text>();
     }
     private void Start()
@@ -35,7 +38,10 @@ public class SlimeCountDisplay : MonoBehaviour
 
         if (GameManager.Instance.GameWon)
         {
-            winText.SetActive(true);
+            if(winText != null)
+            {
+                winText.SetActive(true);
+            }
         }
     }
 }
