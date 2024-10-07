@@ -69,6 +69,17 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Stop();
     }
+
+    public AudioSource GetSoundSource(string soundName)
+    {
+        Sound s = Array.Find(sounds, sound => sound.soundName == soundName);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + soundName + " not found.");
+            return;
+        }
+        return s.source;
+    }
     #endregion
     #region Songs
     public void StartSong(string songName)

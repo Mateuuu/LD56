@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
 
     Camera cam;
 
+
+    AudioSource footstepAudio;
+
     void Awake()
     {
         animator = GetComponentInChildren<Animator>();
@@ -28,6 +31,11 @@ public class PlayerMovement : MonoBehaviour
 
         cam = Camera.main;
         rb = GetComponent<Rigidbody>();    
+    }
+
+    private void Start()
+    {
+        footstepAudio = AudioManager.instance.GetSoundSource("Footstep");
     }
 
     void Update()
@@ -61,8 +69,24 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+
+    [SerializeField] int footstepRate = 8;
+    [SerializeField] float minFootstepPitch = .95f;
+    [SerializeField] float maxFootstepPitch = 1.05f;
+    int i = 0;
     private void FixedUpdate()
     {
+
+
+        
+        if (movement.sqrMagnitude > 0 && i % footstepRate == 0)
+        {
+            footstepAudio.pitch = Random.Range(minFootstepPitch, maxFootstepPitch);
+            AudioManager.instance.PlaySound("Footstep");
+        }
+
+        i++;
+
         float moveMultiplier = 1f;
 
         if(movement.x != 0 && movement.y != 0)
