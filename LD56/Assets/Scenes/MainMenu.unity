@@ -1172,6 +1172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de2f5aaadc1bca42b509f6b7da23dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vanAnimator: {fileID: 0}
   sceneTransition: {fileID: 0}
 --- !u!1 &209333899
 GameObject:
@@ -2108,6 +2109,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
+      propertyPath: sounds.Array.data[19].isLooping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
+      propertyPath: sounds.Array.data[20].soundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8982ffc6fc3a87f48bd019d1c8efb303, type: 3}
+    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
+      propertyPath: sounds.Array.data[21].isLooping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
+      propertyPath: sounds.Array.data[21].soundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 27421e57b44122d47be44ea2ea5fd85f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2220,6 +2237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de2f5aaadc1bca42b509f6b7da23dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vanAnimator: {fileID: 47783186}
   sceneTransition: {fileID: 530849007}
 --- !u!4 &561361484
 Transform:

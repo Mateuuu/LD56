@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: KitchenScene
       objectReference: {fileID: 0}
+    - target: {fileID: 4525091058435392802, guid: 12bb8f948cce44e418cdc3581acdf489, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 0cadbbae095a2b44a8771b0cfb1a4e58, type: 2}
     - target: {fileID: 9008932970486566300, guid: 12bb8f948cce44e418cdc3581acdf489, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.42

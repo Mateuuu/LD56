@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e66af289b801f8d48a8f7efdfe93585b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numSlimes: 23
+  numSlimes: 32
 --- !u!1001 &726193933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1293,34 +1293,6 @@ PrefabInstance:
     - target: {fileID: 6827684065250081472, guid: 8e20218e42150be4583f872be976d582, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
-      propertyPath: songs.Array.data[0].songClip
-      value: 
-      objectReference: {fileID: 8300000, guid: a4c14bfe16fe4d6409d3e99848011736, type: 3}
-    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
-      propertyPath: songs.Array.data[1].songClip
-      value: 
-      objectReference: {fileID: 8300000, guid: d99090bfc37894844ab480ab963c9da0, type: 3}
-    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
-      propertyPath: songs.Array.data[1].isLooping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
-      propertyPath: songs.Array.data[2].isLooping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
-      propertyPath: songs.Array.data[0].songVolume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
-      propertyPath: songs.Array.data[1].songVolume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7555682213406748326, guid: 8e20218e42150be4583f872be976d582, type: 3}
-      propertyPath: songs.Array.data[2].songVolume
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

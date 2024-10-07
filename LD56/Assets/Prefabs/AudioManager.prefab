@@ -155,23 +155,47 @@ MonoBehaviour:
     soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
+  - soundName: VanEnter
+    soundClip: {fileID: 8300000, guid: ac58b00adb5032b45bcb67d4424ca9f9, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: VanIdle
+    soundClip: {fileID: 8300000, guid: bcd16175768799b4391c0219a1e7dd0f, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 1
+    source: {fileID: 0}
+  - soundName: VanDrive
+    soundClip: {fileID: 8300000, guid: 27421e57b44122d47be44ea2ea5fd85f, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: ButtonClick
+    soundClip: {fileID: 8300000, guid: 8982ffc6fc3a87f48bd019d1c8efb303, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 1
+    source: {fileID: 0}
   songs:
   - songName: HouseOpening
     songClip: {fileID: 8300000, guid: a4c14bfe16fe4d6409d3e99848011736, type: 3}
-    songVolume: 1
+    songVolume: 0.5
     songPitch: 1
     isLooping: 0
     source: {fileID: 0}
   - songName: HouseLoop
     songClip: {fileID: 8300000, guid: d99090bfc37894844ab480ab963c9da0, type: 3}
-    songVolume: 1
+    songVolume: 0.5
     songPitch: 1
-    isLooping: 0
+    isLooping: 1
     source: {fileID: 0}
   - songName: MainMenu
     songClip: {fileID: 8300000, guid: a886e34680ed5114a9c81716976f9868, type: 3}
-    songVolume: 1
+    songVolume: 0.5
     songPitch: 1
-    isLooping: 0
+    isLooping: 1
     source: {fileID: 0}
   _mixer: {fileID: 0}
