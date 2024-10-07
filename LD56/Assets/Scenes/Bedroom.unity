@@ -170,14 +170,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4363179877270431575, guid: fe2f05aa20ca2ad4db58c3750a269a6e, type: 3}
-      propertyPath: m_NavMeshData
+    - target: {fileID: 3462668996374048419, guid: fe2f05aa20ca2ad4db58c3750a269a6e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 23800000, guid: 546702158c814914e8c1f3a8d78e73e9, type: 2}
+      objectReference: {fileID: 2100000, guid: c871d25d55eec16429cdfeeadfc4ff37, type: 2}
     - target: {fileID: 5487289249933440502, guid: fe2f05aa20ca2ad4db58c3750a269a6e, type: 3}
       propertyPath: m_Name
       value: EntireScene
       objectReference: {fileID: 0}
+    - target: {fileID: 6979241070758565447, guid: fe2f05aa20ca2ad4db58c3750a269a6e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5bfe55a65fab1924fa8dd14a86851c49, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
