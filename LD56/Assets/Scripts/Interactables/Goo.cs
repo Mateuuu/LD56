@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using static UnityEngine.GraphicsBuffer;
@@ -42,6 +43,7 @@ public class Goo : MonoBehaviour
 
 
     [SerializeField] List<string> gooCaptureSounds;
+    [SerializeField] List<string> gooVoiceSounds;
 
     Material material;
     void Awake()
@@ -50,6 +52,23 @@ public class Goo : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         material = meshRenderer.material;
     }
+
+    private void Start()
+    {
+        StartCoroutine(PlaySounds());
+    }
+
+
+
+    IEnumerator PlaySounds()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(5f, 10f));
+            AudioManager.instance.PlaySound(gooVoiceSounds[Random.Range(0, gooVoiceSounds.Count)]);
+        }
+    }
+
 
     void Update()
     {

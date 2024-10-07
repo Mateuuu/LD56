@@ -48,7 +48,7 @@ MonoBehaviour:
   musicVolume: 1
   sounds:
   - soundName: VacuumHigh
-    soundClip: {fileID: 8300000, guid: db1eff523c5f6934ab0297b315a1a6b6, type: 3}
+    soundClip: {fileID: 8300000, guid: 1df408973b6864246a1b4097bc78514a, type: 3}
     soundVolume: 1
     soundPitch: 1
     isLooping: 1
@@ -65,47 +65,107 @@ MonoBehaviour:
     soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
-  - soundName: 
-    soundClip: {fileID: 0}
-    soundVolume: 0
-    soundPitch: 0
+  - soundName: Scream1
+    soundClip: {fileID: 8300000, guid: 5b8f55a83df52a5438a983c801e7897d, type: 3}
+    soundVolume: 1
+    soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
-  - soundName: 
-    soundClip: {fileID: 0}
-    soundVolume: 0
-    soundPitch: 0
+  - soundName: Scream2
+    soundClip: {fileID: 8300000, guid: 98b1edce99d372f4c9bd269eb8c70572, type: 3}
+    soundVolume: 1
+    soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
-  - soundName: 
-    soundClip: {fileID: 0}
-    soundVolume: 0
-    soundPitch: 0
+  - soundName: Scream3
+    soundClip: {fileID: 8300000, guid: 5ec5ccdcb1d3e3148a610641cea1df97, type: 3}
+    soundVolume: 1
+    soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
-  - soundName: 
-    soundClip: {fileID: 0}
-    soundVolume: 0
-    soundPitch: 0
+  - soundName: Scream4
+    soundClip: {fileID: 8300000, guid: 042bac2590ebdce4ba7e8918c7ebf66f, type: 3}
+    soundVolume: 1
+    soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
-  - soundName: 
-    soundClip: {fileID: 0}
-    soundVolume: 0
-    soundPitch: 0
+  - soundName: Scream5
+    soundClip: {fileID: 8300000, guid: 402674e4d44d0154aadab57d6e252ee3, type: 3}
+    soundVolume: 1
+    soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
-  - soundName: 
-    soundClip: {fileID: 0}
-    soundVolume: 0
-    soundPitch: 0
+  - soundName: Scream6
+    soundClip: {fileID: 8300000, guid: 313de640794a33e4382a11e03a211e2e, type: 3}
+    soundVolume: 1
+    soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
-  - soundName: 
-    soundClip: {fileID: 0}
-    soundVolume: 0
-    soundPitch: 0
+  - soundName: GooVoice1
+    soundClip: {fileID: 8300000, guid: fe6a56a8a22dcc347ade00b72881f0e8, type: 3}
+    soundVolume: 1
+    soundPitch: 1
     isLooping: 0
     source: {fileID: 0}
-  songs: []
+  - soundName: GooVoice2
+    soundClip: {fileID: 8300000, guid: 75bcdb42b651194459013567f5f9fb84, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: GooVoice3
+    soundClip: {fileID: 8300000, guid: d1a76ae94347eb3419d5a0f8ec3feb38, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: GooVoice4
+    soundClip: {fileID: 8300000, guid: e147adcfc6b678d459f73e0cf68c4a3b, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: GooVoice5
+    soundClip: {fileID: 8300000, guid: 1c07203e373859e499326d155af48d33, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: GooVoice5
+    soundClip: {fileID: 8300000, guid: 1c07203e373859e499326d155af48d33, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: GooVoice6
+    soundClip: {fileID: 8300000, guid: 62e24b72e7f7a364b843b2f3b393bbdd, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - soundName: GooSucked
+    soundClip: {fileID: 8300000, guid: e74f184b8e26d814fa19ac463091a66b, type: 3}
+    soundVolume: 1
+    soundPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  songs:
+  - songName: HouseOpening
+    songClip: {fileID: 8300000, guid: 87d0b7dc560620949b0400cfe3e4b5f0, type: 3}
+    songVolume: 1
+    songPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - songName: HouseLoop
+    songClip: {fileID: 8300000, guid: 7b8741b6bd0d3414ca80f0000e21b3f3, type: 3}
+    songVolume: 1
+    songPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
+  - songName: MainMenu
+    songClip: {fileID: 8300000, guid: a886e34680ed5114a9c81716976f9868, type: 3}
+    songVolume: 1
+    songPitch: 1
+    isLooping: 0
+    source: {fileID: 0}
   _mixer: {fileID: 0}

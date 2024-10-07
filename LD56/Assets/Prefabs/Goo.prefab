@@ -445,6 +445,13 @@ MonoBehaviour:
   - Scream4
   - Scream5
   - Scream6
+  gooVoiceSounds:
+  - GooVoice1
+  - GooVoice2
+  - GooVoice3
+  - GooVoice4
+  - GooVoice5
+  - GooVoice6
 --- !u!114 &2703233237775558528
 MonoBehaviour:
   m_ObjectHideFlags: 0
