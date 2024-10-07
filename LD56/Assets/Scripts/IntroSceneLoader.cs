@@ -6,14 +6,18 @@ using UnityEngine.Video;
 
 public class IntroSceneLoader : MonoBehaviour
 {
+    [SerializeField] VideoPlayer video;
     private void Start()
     {
+
+
+        video.SetDirectAudioVolume(0, AudioManager.instance.sfxVolume);
+
         AudioManager.instance.StopSong("MainMenu");
         StartCoroutine(CheckVideoPlaying());     
     }
 
 
-    [SerializeField] VideoPlayer video;
 
 
 

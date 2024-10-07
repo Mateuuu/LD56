@@ -157,13 +157,13 @@ MonoBehaviour:
     source: {fileID: 0}
   songs:
   - songName: HouseOpening
-    songClip: {fileID: 8300000, guid: 87d0b7dc560620949b0400cfe3e4b5f0, type: 3}
+    songClip: {fileID: 8300000, guid: a4c14bfe16fe4d6409d3e99848011736, type: 3}
     songVolume: 1
     songPitch: 1
     isLooping: 0
     source: {fileID: 0}
   - songName: HouseLoop
-    songClip: {fileID: 8300000, guid: 7b8741b6bd0d3414ca80f0000e21b3f3, type: 3}
+    songClip: {fileID: 8300000, guid: d99090bfc37894844ab480ab963c9da0, type: 3}
     songVolume: 1
     songPitch: 1
     isLooping: 0

@@ -6,6 +6,7 @@ public class MainMenuSounds : MonoBehaviour
 {
     void Start()
     {
+        AudioManager.instance.StopAllSongs();
         AudioManager.instance.StartSong("MainMenu");
     }
 }
