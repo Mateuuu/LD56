@@ -2991,14 +2991,18 @@ PrefabInstance:
     - target: {fileID: 2589660850547378109, guid: 070fc9b69831113448c4e33241c0361f, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 11400000, guid: eacb14797adacf94fbb8c9f7dafa05fb, type: 2}
     - target: {fileID: 2589660850547378109, guid: 070fc9b69831113448c4e33241c0361f, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 8250951141549334324, guid: eacb14797adacf94fbb8c9f7dafa05fb, type: 2}
     - target: {fileID: 2589660850547378109, guid: 070fc9b69831113448c4e33241c0361f, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589660850547378109, guid: 070fc9b69831113448c4e33241c0361f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2589660850710096186, guid: 070fc9b69831113448c4e33241c0361f, type: 3}
       propertyPath: m_Sprite
@@ -4719,14 +4723,18 @@ PrefabInstance:
     - target: {fileID: 343865980457361121, guid: 9437fb079162c3745935946976c86cc3, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 11400000, guid: eacb14797adacf94fbb8c9f7dafa05fb, type: 2}
     - target: {fileID: 343865980457361121, guid: 9437fb079162c3745935946976c86cc3, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 8250951141549334324, guid: eacb14797adacf94fbb8c9f7dafa05fb, type: 2}
     - target: {fileID: 343865980457361121, guid: 9437fb079162c3745935946976c86cc3, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 16777215
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 343865980457361121, guid: 9437fb079162c3745935946976c86cc3, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 343865981245590580, guid: 9437fb079162c3745935946976c86cc3, type: 3}
       propertyPath: m_AnchorMax.x
