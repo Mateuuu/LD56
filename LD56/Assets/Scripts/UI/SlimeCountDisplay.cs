@@ -19,7 +19,7 @@ public class SlimeCountDisplay : MonoBehaviour
     {
         GameManager.Instance.slimeCaptured += UpdateCounter;
 
-        displayCount.text = GameManager.Instance.SlimesCaptured + "/" + GameManager.Instance.NumSlimes;
+        displayCount.text = GameManager.Instance.SlimesCaptured.ToString() + "/" + GameManager.Instance.NumSlimes.ToString();
 
     }
 
