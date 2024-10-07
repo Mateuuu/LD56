@@ -6,10 +6,13 @@ using UnityEngine;
 public class SlimeCountDisplay : MonoBehaviour
 {
 
+    [SerializeField] GameObject winText;
+
     TMP_Text displayCount;
 
     private void Awake()
     {
+        winText.SetActive(false);
         displayCount = GetComponent<TMP_Text>();
     }
     private void Start()
@@ -29,5 +32,10 @@ public class SlimeCountDisplay : MonoBehaviour
     private void UpdateCounter(int numSlimes)
     {
         displayCount.text = numSlimes + "/" + GameManager.Instance.NumSlimes;
+
+        if (GameManager.Instance.GameWon)
+        {
+            winText.SetActive(true);
+        }
     }
 }
