@@ -260,10 +260,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0/10
+  m_text: 0/32
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 587aa9193b474164fbbbb0cd2314b119, type: 2}
-  m_sharedMaterial: {fileID: -3768463411159170037, guid: 587aa9193b474164fbbbb0cd2314b119, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 56e1295330cd9fe46b63a4e22e0599eb, type: 2}
+  m_sharedMaterial: {fileID: -3768463411159170037, guid: 56e1295330cd9fe46b63a4e22e0599eb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -508,7 +508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97.9, y: -60.5}
+  m_AnchoredPosition: {x: 58.6, y: -60.5}
   m_SizeDelta: {x: 162.6857, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1192869989
@@ -533,15 +533,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Return to van!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a70f5e3ebf6b2134aa03a90f77403152, type: 2}
+  m_sharedMaterial: {fileID: 8250951141549334324, guid: a70f5e3ebf6b2134aa03a90f77403152, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292870140
-  m_fontColor: {r: 0.9893078, g: 1, b: 0.8726415, a: 1}
+    rgba: 4292870141
+  m_fontColor: {r: 0.9928158, g: 1, b: 0.8745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -565,10 +565,10 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1208,6 +1208,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: HallwayScene
       objectReference: {fileID: 0}
+    - target: {fileID: 2018684464354092452, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: a70f5e3ebf6b2134aa03a90f77403152, type: 2}
+    - target: {fileID: 2018684464354092452, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.8745099
+      objectReference: {fileID: 0}
+    - target: {fileID: 2018684464354092452, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.9921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 2018684464354092452, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8250951141549334324, guid: a70f5e3ebf6b2134aa03a90f77403152, type: 2}
+    - target: {fileID: 2018684464354092452, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
+      propertyPath: m_characterSpacing
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2018684464354092452, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4292870141
+      objectReference: {fileID: 0}
+    - target: {fileID: 2018684464354092452, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2663378239263707857, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
       propertyPath: scenePrefabs.Array.data[0]
       value: 
@@ -1272,6 +1300,10 @@ PrefabInstance:
       propertyPath: sceneTransition
       value: 
       objectReference: {fileID: 1356695808}
+    - target: {fileID: 4874322074605501060, guid: f625c29e593495243818f4a4a7c4a637, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 8250951141549334324, guid: a70f5e3ebf6b2134aa03a90f77403152, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
